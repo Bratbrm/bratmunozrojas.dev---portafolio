@@ -58,7 +58,7 @@
     <section class="hero" id="inicio">
       <div class="wrap hero-grid">
         <div class="hero-text">
-          <h1>Hola, soy Brat</h1>
+          <h1>Hola, soy <span class="nombre">Brat</span></h1>
           <p class="role"><span class="sr-only">Desarrollador Fullstack</span><span class="typed" aria-hidden="true">Desarrollador Fullstack</span></p>
           <p class="intro">Me gusta construir software que la gente use de verdad. Desarrollo sistemas web, de escritorio y móviles, desde la interfaz hasta el servidor, y los dejo listos para producción.</p>
           <div class="actions">
@@ -256,6 +256,10 @@
               <h3>Plataforma de salud ocupacional</h3>
               <p>Atención por servicios, ficha médica, diagnósticos y firma de especialistas. Las empresas descargan la historia clínica laboral y ven exámenes por vencer.</p>
               <ul class="tags"><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>Electron</li></ul>
+              <details class="more">
+                <summary class="btn btn-outline">Ver detalles</summary>
+                <ul class="checks"><li>Circuito de atención por servicios, con ficha médica y diagnósticos</li><li>Firma de especialistas, lector de huella y cámara</li><li>Portal donde cada empresa descarga la historia clínica laboral</li><li>Acceso para que los pacientes vean sus resultados</li><li>Funciona en web, Windows y Android</li></ul>
+              </details>
             </div>
           </article>
           <article class="work">
@@ -268,26 +272,25 @@
               <h3>Sistema de historias clínicas</h3>
               <p>Pacientes, historias clínicas y auditoría de cada acceso para un consultorio. Respaldo y restauración desde el propio sistema.</p>
               <ul class="tags"><li>Angular</li><li>Spring Boot</li><li>PostgreSQL</li><li>Docker</li></ul>
+              <details class="more">
+                <summary class="btn btn-outline">Ver detalles</summary>
+                <ul class="checks"><li>Registro de pacientes e historias clínicas</li><li>Auditoría de quién vio o cambió cada dato</li><li>Respaldo y restauración desde el propio sistema</li><li>Microservicios detrás de un API gateway</li><li>Se instala con un solo comando en Docker</li></ul>
+              </details>
             </div>
           </article>
         </div>
+        <div class="more-wrap"><a class="btn more-link" href="https://github.com/Bratbrm">Ver más proyectos <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a></div>
       </div>
     </section>
 
     <section id="contacto">
       <div class="wrap">
-        <p class="kicker">Contacto</p>
-        <h2>Hablemos</h2>
+        <p class="kicker">Ponte en contacto</p>
+        <h2>Contáctame</h2>
         <div class="contact">
-          <div class="contact-info">
-            <h3>Trabajemos juntos</h3>
-            <p>¿Tienes un proyecto, una vacante o necesitas asesoramiento? Escríbeme y te respondo lo antes posible.</p>
-            <a class="info" href="mailto:bratbrm@gmail.com"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>Correo</small>bratbrm@gmail.com</span></a>
-            <a class="info" href="https://www.linkedin.com/in/bmrds"><span class="chip-icon"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span><span><small>LinkedIn</small>in/bmrds</span></a>
-            <p class="info"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><small>Ubicación</small>Ica, Perú</span></p>
-          </div>
           <form class="form" id="form">
             <h3>Envíame un correo directamente</h3>
+            <p class="form-sub">o escríbeme a <a href="mailto:bratbrm@gmail.com">bratbrm@gmail.com</a></p>
             <label for="nombre">Nombre</label>
             <input id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
             <label for="email">Correo</label>
@@ -309,17 +312,18 @@
   </footer>
 
   <div class="assistant">
+    <div class="chat-fondo" id="chat-fondo" hidden></div>
     <section class="chat" id="chat" hidden aria-label="Asistente">
       <header class="chat-head">
         <span class="avatar">B</span>
-        <div><b>Asistente de Brat</b><small><i></i>Respuestas rápidas</small></div>
+        <div><b>Asistente de Brat</b><small><i></i>En línea</small></div>
         <button class="icon-btn plain" type="button" id="chat-cerrar" aria-label="Cerrar asistente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
       </header>
       <div class="chat-log" id="chat-log" role="log" aria-live="polite"></div>
       <div class="chat-quick" id="chat-quick"></div>
       <form class="chat-form" id="chat-form">
         <label class="sr-only" for="chat-input">Escribe tu pregunta</label>
-        <input id="chat-input" autocomplete="off" placeholder="Escribe tu pregunta…">
+        <input id="chat-input" autocomplete="off" placeholder="Pregúntame lo que quieras…">
         <button class="icon-btn" type="submit" aria-label="Enviar pregunta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </form>
     </section>

@@ -6,6 +6,24 @@ const quieto = matchMedia('(prefers-reduced-motion: reduce)').matches;
 // El HTML está en español; este diccionario da la versión en inglés de cada texto exacto.
 const EN = {
   'Cargando portafolio': 'Loading portfolio',
+  "Hola, soy": "Hi, I'm",
+  "Ponte en contacto": "Get in touch",
+  "Contáctame": "Contact me",
+  "Ver detalles": "View details",
+  "Ver más proyectos": "View more projects",
+  "o escríbeme a": "or write to me at",
+  "En línea": "Online",
+  "Pregúntame lo que quieras…": "Ask me anything…",
+  "Circuito de atención por servicios, con ficha médica y diagnósticos": "Service-based patient flow with medical records and diagnoses",
+  "Firma de especialistas, lector de huella y cámara": "Specialist sign-off, fingerprint reader and camera",
+  "Portal donde cada empresa descarga la historia clínica laboral": "Portal where each company downloads its workers' occupational health records",
+  "Acceso para que los pacientes vean sus resultados": "Patient access to view their results",
+  "Funciona en web, Windows y Android": "Runs on web, Windows and Android",
+  "Registro de pacientes e historias clínicas": "Patient registry and medical records",
+  "Auditoría de quién vio o cambió cada dato": "Audit trail of who viewed or changed each record",
+  "Respaldo y restauración desde el propio sistema": "Backup and restore from within the system",
+  "Microservicios detrás de un API gateway": "Microservices behind an API gateway",
+  "Se instala con un solo comando en Docker": "Installs with a single Docker command",
   'Saltar al contenido': 'Skip to content',
   'Principal': 'Main', 'Menú móvil': 'Mobile menu', 'Abrir menú': 'Open menu',
   'Inicio': 'Home', 'Sobre mí': 'About me', 'Experiencia': 'Experience', 'Proyectos': 'Projects', 'Contacto': 'Contact',
@@ -177,6 +195,16 @@ document.querySelectorAll('main > section[id]').forEach((s) => observador.observ
 // ---------- Entrada animada de Sobre mí ----------
 if (!quieto) {
   root.classList.add('revelar');
+  const marcar = (el, i) => { if (!el.hasAttribute('data-reveal')) el.setAttribute('data-reveal', ''); el.style.setProperty('--i', i); };
+  document.querySelectorAll('main > section:not(.hero) > .wrap').forEach((w) => {
+    const k = w.querySelector(':scope > .kicker'); const t = w.querySelector(':scope > h2');
+    if (k && !k.hasAttribute('data-reveal')) marcar(k, 0);
+    if (t && !t.hasAttribute('data-reveal')) marcar(t, 1);
+  });
+  document.querySelectorAll('.group').forEach((g) => { marcar(g.querySelector('h3'), 0); marcar(g.querySelector('p'), 1); g.querySelectorAll('li').forEach((li, i) => marcar(li, i + 1)); });
+  document.querySelectorAll('.work').forEach((w, i) => marcar(w, i + 2));
+  marcar(document.querySelector('.more-wrap'), 2);
+  marcar(document.querySelector('.form'), 2);
   const revelador = new IntersectionObserver((entradas) => {
     for (const e of entradas) if (e.isIntersecting) { e.target.classList.add('visible'); revelador.unobserve(e.target); }
   }, { threshold: 0.2 });
@@ -235,6 +263,9 @@ function decir(texto, quien) {
   const p = document.createElement('p');
   p.className = `msg ${quien}`;
   p.textContent = texto;
+  const hora = document.createElement('time');
+  hora.textContent = new Date().toLocaleTimeString(idioma === 'en' ? 'en-US' : 'es-PE', { hour: '2-digit', minute: '2-digit' });
+  p.append(hora);
   log.append(p);
   log.scrollTop = log.scrollHeight;
 }
@@ -242,7 +273,13 @@ function responder(pregunta) {
   decir(pregunta, 'yo');
   const q = pregunta.toLowerCase();
   const hallada = t().chat.find((x) => x.claves.some((c) => q.includes(c)));
-  setTimeout(() => decir(hallada ? hallada.r : t().noSe, 'bot'), 350);
+  const puntos = document.createElement('p');
+  puntos.className = 'msg bot escribiendo';
+  puntos.setAttribute('aria-hidden', 'true');
+  puntos.innerHTML = '<i></i><i></i><i></i>';
+  log.append(puntos);
+  log.scrollTop = log.scrollHeight;
+  setTimeout(() => { puntos.remove(); decir(hallada ? hallada.r : t().noSe, 'bot'); }, quieto ? 0 : 900);
 }
 function armarChat() {
   log.replaceChildren();
@@ -255,19 +292,27 @@ function armarChat() {
   }));
   if (!chat.hidden) decir(t().saludo, 'bot');
 }
+const fondo = document.getElementById('chat-fondo');
+fondo.addEventListener('click', () => alternarChat(false));
 function alternarChat(abierto) {
-  chat.hidden = !abierto;
+  if (abierto) {
+    chat.hidden = fondo.hidden = false;
+    requestAnimationFrame(() => requestAnimationFrame(() => { chat.classList.add('abierto'); fondo.classList.add('abierto'); }));
+  } else {
+    chat.classList.remove('abierto'); fondo.classList.remove('abierto');
+    setTimeout(() => { if (!chat.classList.contains('abierto')) chat.hidden = fondo.hidden = true; }, quieto ? 0 : 260);
+  }
   abrir.setAttribute('aria-expanded', String(abierto));
   if (abierto && !log.childElementCount) decir(t().saludo, 'bot');
   if (abierto) entrada.focus(); else abrir.focus();
 }
-abrir.addEventListener('click', () => alternarChat(chat.hidden));
+abrir.addEventListener('click', () => alternarChat(!chat.classList.contains('abierto')));
 document.getElementById('chat-cerrar').addEventListener('click', () => alternarChat(false));
 document.getElementById('chat-form').addEventListener('submit', (e) => {
   e.preventDefault();
   const q = entrada.value.trim();
   if (q) { responder(q); entrada.value = ''; }
 });
-addEventListener('keydown', (e) => { if (e.key === 'Escape' && !chat.hidden) alternarChat(false); });
+addEventListener('keydown', (e) => { if (e.key === 'Escape' && chat.classList.contains('abierto')) alternarChat(false); });
 
 aplicarIdioma();
