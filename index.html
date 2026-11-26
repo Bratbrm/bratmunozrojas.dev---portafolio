@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="es" class="cargando">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brat Muñoz Rojas · Desarrollador Fullstack</title>
+  <meta name="description" content="Portafolio de Brat Muñoz Rojas, desarrollador fullstack en Ica, Perú. Sistemas web, de escritorio y móviles listos para producción.">
+  <meta property="og:title" content="Brat Muñoz Rojas · Desarrollador Fullstack">
+  <meta property="og:description" content="Sistemas web, de escritorio y móviles listos para producción.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    // Antes de pintar: tema guardado, sin destello.
+    try { const t = localStorage.getItem('tema'); if (t) document.documentElement.dataset.theme = t; } catch {}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="loader" aria-hidden="true">
+    <p class="loader-name">Brat</p>
+    <p class="loader-label">Cargando portafolio</p>
+    <span class="loader-bar"><i></i></span>
+  </div>
+
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <header class="bar">
+    <div class="pill">
+      <a class="logo" href="#inicio">PORTAFOLIO<span>.</span></a>
+      <nav class="links" aria-label="Principal">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="lang-btn" type="button" id="idioma" lang="en" aria-label="Switch to English">EN</button>
+      <button class="icon-btn plain" type="button" id="tema" aria-label="Cambiar a modo oscuro">
+        <svg class="sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        <svg class="moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <details class="menu">
+        <summary class="icon-btn plain" aria-label="Abrir menú"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></summary>
+        <nav aria-label="Menú móvil">
+          <a href="#inicio">Inicio</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#experiencia">Experiencia</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <h1>Hola, soy Brat</h1>
+          <p class="role"><span class="sr-only">Desarrollador Fullstack</span><span class="typed" aria-hidden="true">Desarrollador Fullstack</span></p>
+          <p class="intro">Me gusta construir software que la gente use de verdad. Desarrollo sistemas web, de escritorio y móviles, desde la interfaz hasta el servidor, y los dejo listos para producción.</p>
+          <div class="actions">
+            <a class="btn btn-solid" href="#proyectos">Ver proyectos <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn" href="#contacto">Contactar <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          </div>
+          <p class="kicker left">Conecta</p>
+          <div class="social">
+            <a class="icon-btn" href="https://github.com/Bratbrm" aria-label="GitHub"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/bmrds" aria-label="LinkedIn"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+            <a class="icon-btn" href="mailto:bratbrm@gmail.com" aria-label="Correo"><svg class="stroke" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+          </div>
+        </div>
+        <div class="portrait">
+          <div class="photo-ring"><img class="photo" src="assets/foto.png" alt="Brat Muñoz Rojas" width="193" height="193"></div>
+          <ul class="chips">
+            <li><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>2 sistemas en producción y entrega</li>
+            <li><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></svg></span>TypeScript y Java</li>
+            <li><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></span>+5 años de experiencia</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="sobre-mi">
+      <div class="wrap">
+        <p class="kicker" data-reveal>Conóceme</p>
+        <h2 data-reveal style="--i:1">Sobre mí</h2>
+        <div class="about">
+          <img data-reveal="izq" style="--i:2" class="about-photo" src="assets/foto.png" alt="" width="193" height="193" loading="lazy">
+          <div>
+            <div class="about-cols">
+              <div data-reveal style="--i:3">
+                <h3>Quién soy</h3>
+                <p>Soy desarrollador de software en Ica, Perú. Soy técnico en desarrollo de software por SENATI y estoy terminando Ingeniería de Software en la UTP. Trabajo en web, escritorio y móvil, del frontend a la infraestructura.</p>
+              </div>
+              <div data-reveal style="--i:4">
+                <h3>Mi enfoque</h3>
+                <p>Primero entiendo el problema; luego elijo la solución más simple que funcione. Código claro, pruebas y sistemas fáciles de mantener.</p>
+              </div>
+            </div>
+            <div class="details">
+              <h3 data-reveal style="--i:5">Datos personales</h3>
+              <dl>
+                <div data-reveal style="--i:6"><dt>Nombre</dt><dd>Brat Muñoz Rojas</dd></div>
+                <div data-reveal style="--i:7"><dt>Ubicación</dt><dd>Ica, Perú</dd></div>
+                <div data-reveal style="--i:8"><dt>Correo</dt><dd><a href="mailto:bratbrm@gmail.com">bratbrm@gmail.com</a></dd></div>
+                <div data-reveal style="--i:9"><dt>Formación</dt><dd><span class="linea">Ingeniería de Software · UTP (egreso 2027)</span><span class="linea">Técnico en Desarrollo de Software · SENATI (2018–2021)</span></dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <div class="wrap">
+        <p class="kicker">Trayectoria</p>
+        <h2>Experiencia</h2>
+        <ol class="timeline">
+          <li>
+            <span class="date">Feb 2026 – Actualidad · Jornada completa</span>
+            <h3>Junior Software Developer</h3>
+            <p class="org">Caja Ica</p>
+            <p>Desarrollo de aplicaciones web y móviles (Android e iOS) y de servicios con Spring Boot y .NET Core, con mensajería en Kafka y RabbitMQ, caché en Redis, pruebas con JUnit y Mockito, y despliegue continuo con Jenkins y OpenShift.</p>
+            <ul class="tags"><li>Java</li><li>Spring Boot</li><li>.NET Core</li><li>AngularJS</li><li>Swift</li><li>Apache Kafka</li><li>Jenkins</li><li>OpenShift</li></ul>
+          </li>
+          <li>
+            <span class="date">Nov 2026 · Freelance</span>
+            <h3>Desarrollador Fullstack</h3>
+            <p class="org">Consultorio médico particular</p>
+            <p>Desarrollé un sistema de historias clínicas con microservicios, auditoría de accesos y respaldos desde el propio sistema, que se instala con un solo comando.</p>
+            <ul class="tags"><li>Angular</li><li>Java</li><li>Spring Boot</li><li>PostgreSQL</li><li>Docker</li><li>Nginx</li></ul>
+          </li>
+          <li>
+            <span class="date">Jul – Nov 2026 · Freelance</span>
+            <h3>Desarrollador Fullstack</h3>
+            <p class="org">Policlínico de salud ocupacional</p>
+            <p>Construí la plataforma que une la atención, la firma de especialistas y la entrega de resultados. Funciona en web, Windows y Android, con lector de huella, firma digitalizada y un portal para empresas y pacientes.</p>
+            <ul class="tags"><li>React</li><li>TypeScript</li><li>Node.js</li><li>Fastify</li><li>PostgreSQL</li><li>Electron</li><li>Capacitor</li></ul>
+          </li>
+          <li>
+            <span class="date">Ago 2021 – Ene 2026 · Híbrido</span>
+            <h3>Software Engineer</h3>
+            <p class="org">Holosalud</p>
+            <p>Diseño y desarrollo de interfaces de usuario y aplicaciones web con AngularJS y TypeScript, y de servicios con Quarkus, ASP.NET MVC, PHP y Go. Implementé mejoras y actualicé el código según las necesidades de cada proyecto.</p>
+            <ul class="tags"><li>Quarkus</li><li>ASP.NET MVC</li><li>C#</li><li>PHP</li><li>Go</li><li>AngularJS</li><li>TypeScript</li><li>PostgreSQL</li></ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="stack">
+      <div class="wrap">
+        <p class="kicker">Habilidades y herramientas</p>
+        <h2>Mi stack</h2>
+        <div class="groups">
+          <article class="group">
+            <h3>Frontend</h3>
+            <p>Interfaces claras, rápidas y responsivas.</p>
+            <ul>
+              <li><img loading="lazy" src="assets/icons/react.svg" alt="" width="44" height="44">React</li>
+              <li><img loading="lazy" src="assets/icons/angular.svg" alt="" width="44" height="44">Angular</li>
+              <li><img loading="lazy" src="assets/icons/vue.svg" alt="" width="44" height="44">Vue.js</li>
+              <li><img loading="lazy" src="assets/icons/astro.svg" alt="" width="44" height="44">Astro</li>
+              <li><img loading="lazy" src="assets/icons/typescript.svg" alt="" width="44" height="44">TypeScript</li>
+              <li><img loading="lazy" src="assets/icons/javascript.svg" alt="" width="44" height="44">JavaScript</li>
+            </ul>
+          </article>
+          <article class="group">
+            <h3>Backend</h3>
+            <p>APIs y microservicios seguros y mantenibles.</p>
+            <ul>
+              <li><img loading="lazy" src="assets/icons/java.svg" alt="" width="44" height="44">Java</li>
+              <li><img loading="lazy" src="assets/icons/spring.svg" alt="" width="44" height="44">Spring Boot</li>
+              <li><img loading="lazy" src="assets/icons/quarkus.svg" alt="" width="44" height="44">Quarkus</li>
+              <li><img loading="lazy" src="assets/icons/dotnet.svg" alt="" width="44" height="44">.NET</li>
+              <li><img loading="lazy" src="assets/icons/csharp.svg" alt="" width="44" height="44">C#</li>
+              <li><img loading="lazy" src="assets/icons/nodejs.svg" alt="" width="44" height="44">Node.js</li>
+              <li><img loading="lazy" src="assets/icons/fastify.svg" alt="" width="44" height="44">Fastify</li>
+              <li><img loading="lazy" src="assets/icons/php.svg" alt="" width="44" height="44">PHP</li>
+              <li><img loading="lazy" src="assets/icons/laravel.svg" alt="" width="44" height="44">Laravel</li>
+              <li><img loading="lazy" src="assets/icons/go.svg" alt="" width="44" height="44">Go</li>
+            </ul>
+          </article>
+          <article class="group">
+            <h3>Datos y mensajería</h3>
+            <p>Bases relacionales, caché, colas y archivos.</p>
+            <ul>
+              <li><img loading="lazy" src="assets/icons/postgresql.svg" alt="" width="44" height="44">PostgreSQL</li>
+              <li><img loading="lazy" src="assets/icons/mysql.svg" alt="" width="44" height="44">MySQL</li>
+              <li><img loading="lazy" src="assets/icons/redis.svg" alt="" width="44" height="44">Redis</li>
+              <li><img loading="lazy" src="assets/icons/kafka.svg" alt="" width="44" height="44">Kafka</li>
+              <li><img loading="lazy" src="assets/icons/rabbitmq.svg" alt="" width="44" height="44">RabbitMQ</li>
+              <li><img loading="lazy" src="assets/icons/aws.svg" alt="" width="44" height="44">Amazon S3</li>
+            </ul>
+          </article>
+          <article class="group">
+            <h3>Móvil y escritorio</h3>
+            <p>La misma app en el teléfono y en la PC.</p>
+            <ul>
+              <li><img loading="lazy" src="assets/icons/androidstudio.svg" alt="" width="44" height="44">Android Studio</li>
+              <li><img loading="lazy" src="assets/icons/swift.svg" alt="" width="44" height="44">Swift</li>
+              <li><img loading="lazy" src="assets/icons/kotlin.svg" alt="" width="44" height="44">Kotlin</li>
+              <li><img loading="lazy" src="assets/icons/electron.svg" alt="" width="44" height="44">Electron</li>
+              <li><img loading="lazy" src="assets/icons/capacitor.svg" alt="" width="44" height="44">Capacitor</li>
+            </ul>
+          </article>
+          <article class="group">
+            <h3>DevOps y nube</h3>
+            <p>Del código a producción, sin pasos a mano.</p>
+            <ul>
+              <li><img loading="lazy" src="assets/icons/docker.svg" alt="" width="44" height="44">Docker</li>
+              <li><img loading="lazy" src="assets/icons/kubernetes.svg" alt="" width="44" height="44">Kubernetes</li>
+              <li><img loading="lazy" src="assets/icons/openshift.svg" alt="" width="44" height="44">OpenShift</li>
+              <li><img loading="lazy" src="assets/icons/jenkins.svg" alt="" width="44" height="44">Jenkins</li>
+              <li><img loading="lazy" src="assets/icons/nginx.svg" alt="" width="44" height="44">Nginx</li>
+              <li><img loading="lazy" src="assets/icons/linux.svg" alt="" width="44" height="44">Linux</li>
+              <li><img loading="lazy" src="assets/icons/vercel.svg" alt="" width="44" height="44">Vercel</li>
+            </ul>
+          </article>
+          <article class="group">
+            <h3>Pruebas y herramientas</h3>
+            <p>Calidad medida y trabajo en equipo.</p>
+            <ul>
+              <li><img loading="lazy" src="assets/icons/junit.svg" alt="" width="44" height="44">JUnit</li>
+              <li><img loading="lazy" src="assets/icons/sonarqube.svg" alt="" width="44" height="44">SonarQube</li>
+              <li><img loading="lazy" src="assets/icons/vitest.svg" alt="" width="44" height="44">Vitest</li>
+              <li><img loading="lazy" src="assets/icons/jmeter.svg" alt="" width="44" height="44">JMeter</li>
+              <li><img loading="lazy" src="assets/icons/k6.svg" alt="" width="44" height="44">k6</li>
+              <li><img loading="lazy" src="assets/icons/git.svg" alt="" width="44" height="44">Git</li>
+              <li><img loading="lazy" src="assets/icons/github.svg" alt="" width="44" height="44">GitHub</li>
+              <li><img loading="lazy" src="assets/icons/bitbucket.svg" alt="" width="44" height="44">Bitbucket</li>
+              <li><img loading="lazy" src="assets/icons/postman.svg" alt="" width="44" height="44">Postman</li>
+              <li><img loading="lazy" src="assets/icons/insomnia.svg" alt="" width="44" height="44">Insomnia</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <div class="wrap">
+        <p class="kicker">Portafolio</p>
+        <h2>Proyectos destacados</h2>
+        <div class="works">
+          <article class="work">
+            <!-- Captura pendiente: assets/proyectos/salud-ocupacional.webp con datos de prueba. Reemplaza .shot-mock por <img class="shot">. -->
+            <div class="shot shot-mock" aria-hidden="true">
+              <div class="frame-bar"><i></i><i></i><i></i></div>
+              <div class="mock-grid"><span>Atenciones</span><span>Servicios</span><span>Firma y huella</span><span>Portal de empresas</span><span>Resultados</span><span>Reportes</span></div>
+            </div>
+            <div class="work-body">
+              <h3>Plataforma de salud ocupacional</h3>
+              <p>Atención por servicios, ficha médica, diagnósticos y firma de especialistas. Las empresas descargan la historia clínica laboral y ven exámenes por vencer.</p>
+              <ul class="tags"><li>React</li><li>Node.js</li><li>PostgreSQL</li><li>Electron</li></ul>
+            </div>
+          </article>
+          <article class="work">
+            <!-- Captura pendiente: assets/proyectos/historias-clinicas.webp con datos de prueba. Reemplaza .shot-mock por <img class="shot">. -->
+            <div class="shot shot-mock" aria-hidden="true">
+              <div class="frame-bar"><i></i><i></i><i></i></div>
+              <div class="mock-grid"><span>Pacientes</span><span>Historias</span><span>Usuarios y roles</span><span>Auditoría</span><span>Respaldos</span><span>Licencia</span></div>
+            </div>
+            <div class="work-body">
+              <h3>Sistema de historias clínicas</h3>
+              <p>Pacientes, historias clínicas y auditoría de cada acceso para un consultorio. Respaldo y restauración desde el propio sistema.</p>
+              <ul class="tags"><li>Angular</li><li>Spring Boot</li><li>PostgreSQL</li><li>Docker</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <div class="wrap">
+        <p class="kicker">Contacto</p>
+        <h2>Hablemos</h2>
+        <div class="contact">
+          <div class="contact-info">
+            <h3>Trabajemos juntos</h3>
+            <p>¿Tienes un proyecto, una vacante o necesitas asesoramiento? Escríbeme y te respondo lo antes posible.</p>
+            <a class="info" href="mailto:bratbrm@gmail.com"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><span><small>Correo</small>bratbrm@gmail.com</span></a>
+            <a class="info" href="https://www.linkedin.com/in/bmrds"><span class="chip-icon"><svg class="brand" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></span><span><small>LinkedIn</small>in/bmrds</span></a>
+            <p class="info"><span class="chip-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span><span><small>Ubicación</small>Ica, Perú</span></p>
+          </div>
+          <form class="form" id="form">
+            <h3>Envíame un correo directamente</h3>
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="nombre" autocomplete="name" placeholder="Tu nombre" required>
+            <label for="email">Correo</label>
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com" required>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto" required></textarea>
+            <button class="btn btn-solid" type="submit">Enviar mensaje</button>
+            <p class="hint">Se abrirá tu aplicación de correo con el mensaje listo.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <span>© Brat Muñoz Rojas · Ica, Perú</span>
+    </div>
+  </footer>
+
+  <div class="assistant">
+    <section class="chat" id="chat" hidden aria-label="Asistente">
+      <header class="chat-head">
+        <span class="avatar">B</span>
+        <div><b>Asistente de Brat</b><small><i></i>Respuestas rápidas</small></div>
+        <button class="icon-btn plain" type="button" id="chat-cerrar" aria-label="Cerrar asistente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </header>
+      <div class="chat-log" id="chat-log" role="log" aria-live="polite"></div>
+      <div class="chat-quick" id="chat-quick"></div>
+      <form class="chat-form" id="chat-form">
+        <label class="sr-only" for="chat-input">Escribe tu pregunta</label>
+        <input id="chat-input" autocomplete="off" placeholder="Escribe tu pregunta…">
+        <button class="icon-btn" type="submit" aria-label="Enviar pregunta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </form>
+    </section>
+    <button class="fab" type="button" id="chat-abrir" aria-controls="chat" aria-expanded="false" aria-label="Abrir asistente">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>
+    </button>
+  </div>
+</body>
+</html>
